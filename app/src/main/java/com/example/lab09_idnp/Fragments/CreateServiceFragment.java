@@ -9,6 +9,8 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.lab09_idnp.R;
 
@@ -37,7 +39,14 @@ public class CreateServiceFragment extends Fragment {
                 result.putString("Salary", inputSalary.getText().toString());
                 result.putString("Schedule", inputSchedule.getText().toString());
                 result.putString("Profession", inputProfession.getText().toString());
+                Fragment fragment = new ServiceListFragment();
 
+                fragment.setArguments(result);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment_content_main, fragment, "tag");
+                fragmentTransaction.addToBackStack("tag");
+                fragmentTransaction.commit();
             }
         });
 
