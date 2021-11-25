@@ -6,13 +6,133 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/map_message"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:text="Create Service fragment"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Create Service"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutSalary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Salary"
+        app:boxCornerRadiusBottomEnd="8dip"
+        app:boxCornerRadiusBottomStart="8dip"
+        app:boxCornerRadiusTopEnd="8dip"
+        app:boxCornerRadiusTopStart="8dip"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSchedule"
+        app:prefixTextColor="@color/red"
+        app:startIconDrawable="@drawable/ic_money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:inputType="number"
+            android:maxLength="25"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutProfession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Profession"
+        app:boxCornerRadiusBottomEnd="8dip"
+        app:boxCornerRadiusBottomStart="8dip"
+        app:boxCornerRadiusTopEnd="8dip"
+        app:boxCornerRadiusTopStart="8dip"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSalary"
+        app:prefixTextColor="@color/red"
+        app:startIconDrawable="@drawable/ic_school">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:inputType="text"
+            android:maxLength="30"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutSchedule"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Schedule"
+        app:boxCornerRadiusBottomEnd="8dip"
+        app:boxCornerRadiusBottomStart="8dip"
+        app:boxCornerRadiusTopEnd="8dip"
+        app:boxCornerRadiusTopStart="8dip"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:prefixTextColor="@color/red"
+        app:startIconDrawable="@drawable/ic_schedule">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:maxLength="25"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFAF48"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Create Service"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dip"
+        app:icon="@drawable/ic_arrow_right"
+        app:iconGravity="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutProfession" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
